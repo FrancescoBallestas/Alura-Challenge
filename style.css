@@ -101,6 +101,21 @@ html{
     background: none;
 }
 
+.btn-desencriptar:hover{
+    transform: scale(1.05);
+    font-size: 1.5em;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #0A3871, #495057) ;
+    color: #D8DFE8;
+}
+
+.btn-encriptar:hover{
+    transform: scale(1.05);
+    font-size: 1.5em;
+    cursor: pointer;
+    background: #D8DFE8;
+    color: #0A3871;
+}
 
 
 
