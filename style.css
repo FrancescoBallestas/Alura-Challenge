@@ -1,15 +1,8 @@
-html{
+.cuerpo{
     background: #f3f5fc;
-    position: relative;
     width: 1440px;
     height: 1024px;
-    margin: 0 0 0 0;
-    padding: 0;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    top: 0px;
-    
+    position: relative; 
 }
 
 .logo{
@@ -20,19 +13,13 @@ html{
     top: 40px; 
     right: 1324.91px;
     bottom: 936px;
-    left: 84px;  
-    margin: 0;
-    padding: 0; 
+    left: 84px;    
 }
 
 .exclamar{
     width: 16px;
     height: 16px;
-    padding: 0;
-    margin: 0;
     position: absolute;
-    top: 852px;
-    right: 1184px;
     bottom: 156px;
     left: 240px;
 }
@@ -40,8 +27,6 @@ html{
 .advertencia{
     width: 205px;
     height: 18px;   
-    padding: 0;
-    margin: 0;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
@@ -49,9 +34,9 @@ html{
     opacity: 80%;   
     position: absolute;
     top: 851px;
-    right: 971px;
     bottom: 155px;
     left: 264px;
+    margin: 0;   
 }
 
 .btn-encriptar{
@@ -94,7 +79,7 @@ html{
     margin: 0;
 }
 
-.cuadro-texto{
+.cuadro-texto,.ingrese-texto{
     width: 577px;
     height: 48px;
     font-size: 32px;
@@ -108,8 +93,8 @@ html{
     margin: 0;
     border: none;
     background: none;
-    border-color: none;
-    
+    border-color: none;    
+    padding-left: 5px;
 }
 
 .btn-desencriptar:hover{
@@ -126,13 +111,12 @@ html{
     cursor: pointer;
     background: #D8DFE8;
     color: #0A3871;
+    border-color: black;
 }
 
 .cuadro-respuesta{
     background: #FFFFFF;
     position: absolute;
-    top: 40px;
-    right: 40px;
     left: 1000px;
     bottom: 40px;
     width: 400px;
@@ -158,10 +142,6 @@ html{
     right: 72px;
     bottom: 307px;
     left: 32px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .mensaje-desencriptado{
@@ -179,10 +159,6 @@ html{
     right: 72px;
     bottom: 283px;
     left: 32px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .muñeco{
@@ -197,4 +173,22 @@ html{
 
 .cuadro-texto:active{
     display: hidden;
+}
+
+.contenedor{
+    display: inline-block;
+    min-width: 100px;
+  }
+  
+#switch-image{
+    width: 336px;
+    height: 781px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;  
+    position: absolute;
+    left: 32px;
+    top: 72px;  
+    color: #495057;
+    text-align: justify;
 }
