@@ -4,42 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="style.css">
     <title>Encriptador/Desencriptador Alura</title>
 </head>
-<body class="cuerpo">
-    <header>
-        <div>
-            <nav> 
-                <img class="logo" src="imagenes/logo.png" alt="imagen logo de alura, letra a">
-            </nav>
-        </div>
+<body class="body" id="body">
+    <header class="header" id="header">
+        <img class="logo-alura" id="logo-alura" src="imagenes/logo.png" alt="imagen logo de alura, letra a">
     </header>
-    <main>
+    <main class="main" id="main">
         <section>
-            <div>
-                <img src="imagenes/excalmar.png" alt="signo de exclamación" class="exclamar">
+            <div class="cuadro-advertencia">
+                <img src="imagenes/excalmar.png" alt="signo de exclamación" class="exclamar" id="exclamar">
                 <p class="advertencia">Solo letras minúsculas y sin acentos</p>
-                <button type="button" name="encriptar" class="btn-encriptar" id="btn-encriptar">Encriptar</button>
-                <button type="button" name="desencriptar" class="btn-desencriptar" id="btn-desencriptar">Desencriptar</button>
-                <label id="switch-txt" for="cuadro-texto" class="ingrese-texto">Ingrese el texto aquí</label>
-                
-                
-                <div class="contenedor">
-                    <div class="texto-ct" contenteditable="true">
-                        <textarea type="text" name="cuadro-texto" id="cuadro-texto" class="cuadro-texto" onclick="switchTxt()"></textarea>
-                    </div>
-                </div>
             </div>
+            <div class="botonera" id="botonera">
+                <button type="button" name="encriptar" class="btn-encriptar" id="btn-encriptar">Encriptar</button>
+                <button type="button" name="desencriptar" class="btn-desencriptar" id="btn-desencriptar">Desencriptar</button>  
+            </div>
+            
+            <label id="switch-txt" for="cuadro-texto" class="ingrese-texto">Ingrese el texto aquí</label>
+            <textarea type="text" name="cuadro-texto" id="cuadro-texto" class="cuadro-texto" onclick="switchTxt()"></textarea>
+                
+            
             <div class="cuadro-respuesta" id="cuadro-respuesta">
-                <nav id="switch-image">
-                    <img src="imagenes/Muñeco.png" alt="muñeco" class="muñeco">
-                    <ul class="text-interno">
-                        <li class="mensaje-encontrado">Ningún mensaje fue encontrado</li>
-                        <li class="mensaje-desencriptado">Ingrese el texto que desees encriptar o desencriptar.</li>
-                    </ul>
-                </nav>
+                <img src="imagenes/Muñeco.png" alt="muñeco" class="muñeco">
+                <button type="button" name="copy" class="copy" id="copy">Copiar</button>
+                <p id="respuesta" class="respuesta"></p>
+                <nav class="recuadro">
+                    
+                        <p class="mensaje-no-encontrado">Ningún mensaje fue encontrado</p>
+                        <p class="mensaje-desencriptado">Ingrese el texto que desees encriptar o desencriptar.</p>
+                    
+                </nav>    
             </div>
         </section>
         <script src="index.js"></script>
