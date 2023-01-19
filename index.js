@@ -12,8 +12,13 @@ function switchTxt() {
 function encrypt() {
   let texto = document.getElementById("cuadro-texto").value;
   let encryptedString = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
-  
   document.getElementById("respuesta").innerHTML = encryptedString;
+  document.getElementById("cuadro-respuesta").style.display = "block";
+  var hiddenElements = document.getElementsByClassName("hidden");
+  for (var i = 0; i < hiddenElements.length; i++) {
+    hiddenElements[i].style.display = "none";
+  }
+  document.getElementById("copy").style.visibility = "visible";
 }
 
 //Asignar la función al botón
@@ -24,8 +29,13 @@ button.onclick = encrypt;
 function desencrypt() {
   let texto = document.getElementById("cuadro-texto").value;
   let desencryptedString = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
-  
   document.getElementById("respuesta").innerHTML = desencryptedString;
+  document.getElementById("cuadro-respuesta").style.display = "block";
+  var hiddenElements = document.getElementsByClassName("hidden");
+  for (var i = 0; i < hiddenElements.length; i++) {
+    hiddenElements[i].style.display = "none";
+  }
+  document.getElementById("copy").style.visibility = "visible";
 }
 
 //Asignar la función al botón
@@ -86,11 +96,3 @@ if (mostrarBoton) {
   miBoton.style.visibility = "hidden";
 }
 
-
-const miInput = document.getElementById("respuesta");
-const imagen = document.getElementById("switch-image");
-if (miInput == 'none') {
-  imagen.style.display = "none";
-} else {
-  imagen.style.display = "block";
-}
