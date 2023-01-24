@@ -261,13 +261,13 @@
 
 /* Media query para tablet */
 @media (max-width: 768px){
-    .cuerpo{
+    .body{
         width: 768px;
         height: 1174px;
         position: relative; 
     }
     
-    .logo{
+    .logo-alura{
         width: 31.09px;
         height: 50.58px;
         position: absolute;
@@ -275,40 +275,64 @@
         left: 40px;    
     }
     
-    .exclamar{
-        width: 18px;
-        height: 18px;
+    .cuadro-advertencia{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
         position: absolute;
-        bottom: 305px;
+        width: 229px;
+        height: 18px;
         left: 40px;
-        
+        top: 836px;
+    }
+
+    .exclamar{
+        width: 16px;
+        height: 16px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;  
     }
     
     .advertencia{
         width: 205px;
-        height: 18px;   
-        padding-left: 18px;  
+        height: 18px;
+        padding-left: 26px;       
+    }
+
+    .botonera{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
         position: absolute;
-        bottom: 321px;
-        left: 52px;
-         
+        width: 688px;
+        height: 67px;
+        left: 40px;
+        top: 870px;
     }
     
     .btn-encriptar{
-        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
         width: 332px;
-        height: 67px;
-        left: 40px;
-        bottom: 237px;
+        height: 67px;   
     }
     
     .btn-desencriptar{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px; 
         width: 332px;
-        height: 67px;
-        position: absolute;
-        bottom: 237px;
-        left: 396px;
-        
+        height: 67px;   
     }
     
     .cuadro-texto,.ingrese-texto{
@@ -319,111 +343,144 @@
         top: 240px;
     }
     
-    .mensaje-encontrado{
+    .recuadro{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
         width: 624px;
-        height: 29px;
-        position: relative;
-        top: 2rem;
+        height: 69px;
+        position: absolute;
+        left: 32px;
+        top: 32px;
     }
 
-    
+    .mensaje-no-encontrado{
+        width: 624px;
+        height: 29px;
+        flex: none;
+        align-self: stretch;
+        flex-grow: 0;
+        position: absolute;
+        
+    }
+  
     .mensaje-desencriptado{
         
         width: 624px;
         height: 24px;
-        position: relative;
-        top: 2rem;
+        position: absolute;
+        top: 42px;
     }
 
     .respuesta{
+        width: 624px;
+        height: 180px;
         display: none;
     }
+
     .cuadro-respuesta{
-        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+        padding: 0;
         position: absolute;
         width: 688px;
         height: 133px;
         left: 40px;
         top: 1001px;
-        bottom: 40px;
     }
     
     .muñeco{
         display: none;
-    }
-    
-    .cuadro-texto:active{
-        display: hidden;
-    }
-    
-    .contenedor{
-        display: inline-block;
-        min-width: 100px;
-      }
-      
+    } 
     
     .copy{
         display: none;
         
     }
-
-    
+   
 }
 
 /* Media query para celular */
 @media (max-width: 375px){
-    .cuerpo{
+    .body{
         width: 375px;
         height: 933px;
-        position: relative; 
+        position: relative;
     }
     
-    .logo{
+    .logo-alura{
         width: 32px;
         height: 48px;
         position: absolute;
         left: 16px;
         top: 24px;
-          
     }
-    
+
+    .cuadro-advertencia{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        position: absolute;
+        width: 229px;
+        height: 18px;
+        left: 16px;
+        top: 451px;
+    }
+
     .exclamar{
         width: 16px;
         height: 16px;
-        position: absolute;
-        top: 452px;
-        left: 16px;
+        flex: none;
+        flex-grow: 0;
         
     }
     
     .advertencia{
         width: 205px;
         height: 18px;   
-        padding-left: 18px;  
-        position: absolute;
-        bottom: 464px;
-        left: 40px;
-        display: none;
+        flex: none;
+        flex-grow: 0;
          
+    }
+
+    .botonera{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        position: absolute;
+        width: 343px;
+        height: 158px;
+        left: 16px;
+        top: 485px;
     }
     
     .btn-encriptar{
-        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
         width: 343px;
-        height: 67px;
-        left: 16px;
-        bottom: 381px;
-        display: none;
+        height: 67px;   
     }
     
     .btn-desencriptar{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px; 
         width: 343px;
-        height: 67px;
-        position: absolute;
-        bottom: 290px;
-        left: 16px;
-        display: none;
-        
+        height: 67px;   
     }
     
     .cuadro-texto,.ingrese-texto{
@@ -434,36 +491,56 @@
         top: 152px;
     }
     
-    .mensaje-encontrado{
+    .mensaje-no-encontrado{
         width: 263px;
         height: 58px;
-        position: absolute;
-        left: 56px;
-        bottom: 136px;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
     }
 
-    
     .mensaje-desencriptado{
-        
         width: 263px;
         height: 48px;
-        position: absolute;
-        left: 56px;
-        bottom: 72px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        top: 74px;
     }
 
     .respuesta{
         display: none;
     }
+
     .cuadro-respuesta{
-        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 32px;
         position: absolute;
         width: 327px;
         height: 186px;
         left: 24px;
-        
-        bottom: 40px;
+        top: 707px;
     }
+
+    .recuadro{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+        width: 263px;
+        height: 122px;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
     .texto-interno{
         display: none;
     }
@@ -474,13 +551,7 @@
     
     .cuadro-texto:active{
         display: hidden;
-    }
-    
-    .contenedor{
-        display: inline-block;
-        min-width: 100px;
-      }
-      
+    }  
     
     .copy{
         display: none;
