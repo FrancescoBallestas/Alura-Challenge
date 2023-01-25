@@ -47,8 +47,8 @@
     height: 18px;
     left: 240px;
     top: 851px;
-
 }
+
 .exclamar{
     width: 16px;
     height: 16px;
@@ -268,6 +268,30 @@
     line-height: 150%;
     color: #495057;
     text-align: justify; 
+    border: none;
+}
+
+.pie-pagina{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    gap: 8px;
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    bottom: 20px;
+}
+
+.footer{
+    width: 205px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #495057;
 }
 
 /* Media query para tablet */
@@ -387,11 +411,12 @@
 
     .respuesta{
         width: 624px;
-        height: 180px;
-        display: none;
+        height: 110px;
+        position: absolute;
+        top: 10px;
     }
 
-    .cuadro-respuesta{
+    .cuadro-respuesta, .mostrar-mensaje{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -410,8 +435,18 @@
     } 
     
     .copy{
-        display: none;
-        
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+        width: 624px;
+        height: 67px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
     }
    
 }
@@ -522,10 +557,24 @@
     }
 
     .respuesta{
-        display: none;
+        width: 624px;
+        height: 180px;
     }
 
     .cuadro-respuesta{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 32px;
+        position: absolute;
+        width: 327px;
+        height: 186px;
+        left: 24px;
+        top: 707px;
+    }
+
+    .mostrar-mensaje{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -551,21 +600,17 @@
         align-self: stretch;
         flex-grow: 0;
     }
-
-    .texto-interno{
-        display: none;
-    }
     
     .muñeco{
         display: none;
     }
     
-    .cuadro-texto:active{
-        display: hidden;
-    }  
-    
     .copy{
-        display: none;    
+        width: 279px;
+        height: 67px;
+        position: absolute;
+        align-items: center;
+        left: 32px;
     }
     
 }

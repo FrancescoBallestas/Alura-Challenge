@@ -18,6 +18,22 @@ function encrypt() {
   document.getElementById("respuesta").innerHTML = encryptedString;
   document.getElementById("mostrar-mensaje").style.display = "block";
   document.getElementById("copy").style.visibility = "visible";
+  // Modificar el estilo para media query de tablet
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    document.getElementById("body").style.height= "1384px";
+    document.getElementById("cuadro-respuesta").style.height = "343px";
+    document.getElementById("mostrar-mensaje").style.height = "343px";
+    document.getElementById("respuesta").style.height = "180px";
+  }
+  // Modificar el estilo para media query de celular
+  if (window.matchMedia("(max-width: 375px)").matches) {
+    document.getElementById("body").style.height= "1415px";
+    document.getElementById("cuadro-respuesta").style.height = "595px";
+    document.getElementById("mostrar-mensaje").style.height = "595px";
+    document.getElementById("respuesta").style.height = "432px";
+    document.getElementById("respuesta").style.width = "279px";
+  }
+
 }
 
 //Asignar la función al botón
@@ -31,6 +47,22 @@ function desencrypt() {
   document.getElementById("respuesta").innerHTML = desencryptedString;
   document.getElementById("mostrar-mensaje").style.display = "block";
   document.getElementById("copy").style.visibility = "visible";
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    document.getElementById("body").style.height= "1384px";
+    document.getElementById("cuadro-respuesta").style.height = "343px";
+    document.getElementById("mostrar-mensaje").style.height = "343px";
+    document.getElementById("respuesta").style.height = "180px";
+  }
+  // Modificar el estilo para media query de celular
+  if (window.matchMedia("(max-width: 375px)").matches) {
+    document.getElementById("body").style.height= "1415px";
+    document.getElementById("cuadro-respuesta").style.height = "595px";
+    document.getElementById("mostrar-mensaje").style.height = "595px";
+    document.getElementById("respuesta").style.height = "432px";
+    document.getElementById("respuesta").style.width = "279px";
+  }
+
 }
 
 //Asignar la función al botón
@@ -38,14 +70,20 @@ var button = document.getElementById("btn-desencriptar");
 button.onclick = desencrypt;
 
 // Función para copiar el texto desencriptado
-function copiarTexto() {
+async function copiarTexto() {
   // Seleccionar el elemento de texto
-  var texto = document.getElementById("respuesta").value;
+  var texto = document.getElementById("respuesta");
   // Verifica si el texto esta vacio
-  if(texto.trim() == ""){
+  if(texto.value.trim() == ""){
     alert("No hay texto para copiar");
   } else {
-    navigator.clipboard.writeText(texto);
+    try {
+      await navigator.clipboard.writeText(texto.value);
+      console.log('Texto copiado exitosamente al portapapeles.');
+    } catch (err) {
+      console.error('Error al copiar el texto: ', err);
+      alert("Error al copiar el texto");
+    }
   }
 }
 
